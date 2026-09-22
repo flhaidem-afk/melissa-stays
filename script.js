@@ -477,3 +477,24 @@ if (menuBtn && mobileMenu) {
     });
   });
 }
+/* =========================
+   PROPERTY VIDEO SOUND
+========================= */
+
+const propertyVideo = document.querySelector("#propertyVideo");
+const videoSoundBtn = document.querySelector("#videoSoundBtn");
+
+if (propertyVideo && videoSoundBtn) {
+  videoSoundBtn.addEventListener("click", () => {
+
+    propertyVideo.muted = !propertyVideo.muted;
+
+    if (propertyVideo.muted) {
+      videoSoundBtn.textContent = "🔇 Sound";
+    } else {
+      videoSoundBtn.textContent = "🔊 Sound";
+      propertyVideo.play();
+    }
+
+  });
+}
